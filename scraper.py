@@ -33,7 +33,7 @@ except IndexError:
 #- data wystawienia: span.reviw-time > time["datetime"] -pierwszy element listy 
 #- data zakupu: span.reviw-time > time["datetime"] -drugi element listy jezeli istnije 
 useful=opinion.find("button","votes-yes").find("span").string
-useles=opinion.find("button","votes-no").find("span").string
+useless=opinion.find("button","votes-no").find("span").string
 content=opinion.find("p","product-review-body").get_text()
 try:
     pros=opinion.find("div", "pros-cell").find("ul").get_text()
@@ -43,7 +43,7 @@ try:
     cons=opinion.find("div", "cons-cell").find("ul").get_text()
 except AttributeError:
     cons= None
-
+print(opinion_id,recommendation,stars,author,pros,cons,useful,useless,purchased,purchase_date,review_date)
 
 
 #- przydatna: span[id=^votes-yes]
