@@ -19,4 +19,6 @@
 - zalety:div.pros-cell> ul
 ## Etap 2 - pobieranie składowych wszystkich opinii z pojedynczej strony 
 - zapisanie składowych opinii w złozonej structure danych
-## Etap 3 - pobieranie wszystkich opinii o pojedynczym
+## Etap 3 - pobieranie wszystkich opinii o pojedynczym produkcie
+- przechodzenie po stranach z opiniami
+- eksport opinii do pliku?(.csv. lub .xslx lub . json)  
