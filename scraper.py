@@ -15,7 +15,16 @@ opinion_id=opinion["data-entry-id"]
 author = opinion.find('div',"reviewer-name-line").string
 recommendation= opinion.find('div',"product-review-summary ").find("em").string
 stars=opinion.find("div","review-score-count").string
-purchased=opinion.find("div","product-review-pz").string
+try:
+    purchased=opinion.find("div","product-review-pz").string
+except: IndexError:
+    purchased=None
+dates = opinion.find("span","review-time").find_all("time")
+review_date= dates.pop(0)["datetime"]
+try:
+    purchase_date= dates.pop(0)["datetime"]
+except IndexError:
+    purchase_date= None
 #-identyfikator: li.review-box["data-entry-id"]
 #- autor: div. reviewer-name-line
 #- rekomendacja: div.product-review-summary > em
@@ -26,6 +35,16 @@ purchased=opinion.find("div","product-review-pz").string
 useful=opinion.find("button","votes-yes").find("span").string
 useles=opinion.find("button","votes-no").find("span").string
 content=opinion.find("p","product-review-body").get_text()
+try:
+    pros=opinion.find("div", "pros-cell").find("ul").get_text()
+except AttributeError:
+    pros=None
+try:
+    cons=opinion.find("div", "cons-cell").find("ul").get_text()
+except AttributeError:
+    cons= None
+
+
 
 #- przydatna: span[id=^votes-yes]
              #button.vote-yes["data-total-vote"]
