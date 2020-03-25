@@ -77,7 +77,7 @@ while url:
 
 with open(product_id+".json", "w", encoding="utf-8") as fp:
     json.dump(opinion_list, fp, ensure_ascii=False, indent=4, separators=(',', ':'))
-pprint.pprint(opinion_id)
+#pprint.pprint(opinion_id)
 
 
 #- przydatna: span[id=^votes-yes]
