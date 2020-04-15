@@ -37,7 +37,7 @@ url_prefix="https://www.ceneo.pl"
 product_id = input("Podaj kod productu: ")
 url_postfix="#tab=reviews"
 url=url_prefix+"/"+url_postfix
- opinions_list =[]
+opinions_list =[]
 while url:
     #poranie kodu html strony z podaego URL 
     page_respons= requests.get(url)
@@ -73,15 +73,6 @@ while url:
     print(url)
 with open(product_id+".json", "w", encoding="utf-8") as fp:
     json.dump(opinion_list, fp, ensure_ascii=False, indent=4, separators=(',', ':'))
-#pprint.pprint(opinion_id)
 
-
-#- przydatna: span[id=^votes-yes]
-             #button.vote-yes["data-total-vote"]
-             #button.vote-yes > span
-#- nieprzydatna:span[id=^votes-no]
-             #button.vote-no["data-total-vote"]
-             #button.vote-no > span
-#- treść: p.product-review-body
-#- wady: div.cons-cell >ul
-#- zalety:div.pros-cell> ul
+print(len(opinions_list))
+#pprint.pprint(opinions_list)
