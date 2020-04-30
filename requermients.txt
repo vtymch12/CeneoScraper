@@ -7,12 +7,15 @@ click==7.1.1
 colorama==0.4.3
 cycler==0.10.0
 Flask==1.1.2
+Flask-Markdown==0.3
+Flask-WTF==0.14.3
 idna==2.9
 isort==4.3.21
 itsdangerous==1.1.0
 Jinja2==2.11.2
 kiwisolver==1.2.0
 lazy-object-proxy==1.4.3
+Markdown==3.2.1
 MarkupSafe==1.1.1
 matplotlib==3.2.1
 mccabe==0.6.1
@@ -29,3 +32,4 @@ soupsieve==2.0
 urllib3==1.25.8
 Werkzeug==1.0.1
 wrapt==1.11.2
+WTForms==2.3.1
