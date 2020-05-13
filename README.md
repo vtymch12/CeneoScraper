@@ -50,4 +50,4 @@
         /README.md
         /.venv
 - widoki (Jinja)
-- routingi
+- routingi 
